@@ -20,25 +20,23 @@
     <div class="row">
         <div class="col-sm-12 col-md-3 col-lg-3">  <!-- 1st col of the 1st row-->
             <div class="row">
-                <div class="dog-container mx-auto">
-                        <div class="character card" data-char="Pancake" style="width: 10rem;">
+                <div class="dog-container mx-auto" >
+                        <div id="Pancake" class="character card">
                             <img class="card-img-top" src="./assets/images/pancakeface.png" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title text-center">Pancke the Pug</h5>
                                 <p class="card-text">Description of the Pug and why to pick them</p>
-                                <a class="btn btn-primary picker">Choose me!</a>
                             </div>
                         </div>
                 </div>
             </div>
             <div class="row">
                 <div class="dog-container mx-auto">
-                        <div class="character card" data-char="KingKong" style="width: 10rem;">
+                        <div id="KingKong" class="character card">
                             <img class="card-img-top" src="./assets/images/blackpug.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title text-center">King Kong the Pug</h5>
                                 <p class="card-text">Description of the Pug and why to pick them</p>
-                                <a class="btn btn-primary picker">Choose me!</a>
                             </div>
                         </div>
                 </div>
@@ -57,28 +55,51 @@
                     <h6>Click the Bark button to tell your Pug to bark at the enemy Pug, and in turn they will most likely be annoyned and retalliate. The first Pug to have all of their tolerance for the other dog drop to 0 will lose. Defeat all Pugs to be declared the Snortiest of them all!</h6>
     
                 </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="dog-container">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div id="chosenCard"></div>
+                                            <h5 class="card-title text-center">Chosen Pug</h5>
+                                            <p id="chosenPugHealthCount" class="card-text">Tolerance Points</p>
+                                            <a id="bark" class="btn btn-primary">Bark!</a>
+                                        </div>
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="dog-container">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div id="enemyCard"></div>
+                                            <h5 class="card-title text-center">Enemy Pug</h5>
+                                            <p id="enemyPugHealthCount" class="card-text">Tolerance Points</p>
+                                        </div>
+                                    </div>
+                            </div>
+                    </div>
+                </div>
         </div>
         <div class="col-sm-12 col-md-3 col-lg-3 mx-auto">  <!-- 3rd col-->
             <div class="row">
                 <div class="dog-container mx-auto">
-                        <div class="character card" data-char="Leo" style="width: 10rem;">
+                        <div class="character card" id="Leo">
                             <img class="card-img-top" src="./assets/images/brindlepug.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title text-center">Leo the Pug</h5>
                                 <p class="card-text">Description of the Pug and why to pick them</p>
-                                <a class="btn btn-primary picker">Choose me!</a>
                             </div>
                         </div>
                 </div>
             </div>
             <div class="row">
                 <div class="dog-container mx-auto">
-                        <div class="character card" data-char="Blizzard" style="width: 10rem;">
+                        <div class="character card" id="Blizzard">
                             <img class="card-img-top" src="./assets/images/whitepug.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title text-center">Blizzard the Pug</h5>
                                 <p class="card-text">Description of the Pug and why to pick them</p>
-                                <a class="btn btn-primary picker">Choose me!</a>
                             </div>
                         </div>
                 </div>
@@ -86,31 +107,7 @@
         </div>
     </div> <!-- <this is the end of the first row class -->
     <!-- row 2 starts here -->
-    <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-6">
-                <div class="dog-container">
-                        <div class="card" style="width: 16rem;">
-                            <img class="card-img-top" src="" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Chosen Pug</h5>
-                                <p id="chosenPugHealthCount" class="card-text">Tolerance Points</p>
-                                <a id="bark" class="btn btn-primary">Bark!</a>
-                            </div>
-                        </div>
-                </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-6">
-                <div class="dog-container">
-                        <div class="card" style="width: 16rem;">
-                            <img class="card-img-top" src="" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Enemy Pug</h5>
-                                <p id="enemyPugHealthCount" class="card-text">Tolerance Points</p>
-                            </div>
-                        </div>
-                </div>
-        </div>
-    </div>
+   
     
 </body>
 <script type="text/javascript" src="./assets/javascript/game.js"></script>

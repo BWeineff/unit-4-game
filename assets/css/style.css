@@ -8,11 +8,7 @@ body {
 .jumbotron {
     opacity: .6;
 }
-.card-img-top {
-    width: 110px;
-    height: 220px;
-    align-self: center;
-}
+
 .dog-container {
     opacity: .8;
 }
