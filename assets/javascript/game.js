@@ -8,6 +8,7 @@ var character = {
     "Pancake": {
     name: "Pancake",
     tolerancePoints: 50,
+    tolerancePointsMax: 50,
     barkPower: 10,
     isDead: false
 },
@@ -15,17 +16,20 @@ var character = {
     name: "King Kong",
     tolerancePoints: 40,
     barkPower: 15,
+    tolerancePointsMax: 40,
     isDead: false
 },
     "Leo": {
     name: "Leo",
     tolerancePoints: 30,
+    tolerancePointsMax: 30,
     barkPower: 17,
     isDead: false
 },
     "Blizzard": {
     name: "Blizzard",
     tolerancePoints: 35,
+    tolerancePointsMax: 35,
     barkPower: 15,
     isDead: false
 },
@@ -53,10 +57,15 @@ function barkFunction() {
     chosenPug.tolerancePoints -= enemyPug.barkPower;
 
     if (enemyPug.tolerancePoints <= 0) {
-        alert("You've defeated the enemy Pug! He's all out of barks and snorts! Time to get TREATS!")
+        alert("You've defeated the enemy Pug! He's all out of barks and snorts! Time to get TREATS!");
+        $("#enemyCard .character").remove();
+        enemyPug = null;
+        chosenPug.tolerancePoints = chosenPug.tolerancePointsMax
     }
     if (chosenPug.tolerancePoints <= 0) {
-        alert("You've been out-barked! The noise and snorts are deafening! Refresh the page and try again!");
+        alert("You've been out-barked! The noise and snorts are deafening! The game will now restart!");
+        location.reload();
+        
     }
 
     $("#chosenPugHealthCount").html("<p> Your tolerance for listening to all this barking is only " + chosenPug.tolerancePoints + " points! </p>");
